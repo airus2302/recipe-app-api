@@ -23,8 +23,8 @@ class Migration(migrations.Migration):
                 ('name', models.CharField(max_length=255)),
                 ('is_active', models.BooleanField(default=True)),
                 ('is_staff', models.BooleanField(default=False)),
-                ('groups', models.ManyToManyField(blank=True, help_text='The groups this user belongs to. A user will get all permissions granted to each of their groups.', related_name='user_set', related_query_name='user', to='auth.group', verbose_name='groups')),  # noqa: E501
-                ('user_permissions', models.ManyToManyField(blank=True, help_text='Specific permissions for this user.', related_name='user_set', related_query_name='user', to='auth.permission', verbose_name='user permissions')),  # noqa: E501
+                ('groups', models.ManyToManyField(blank=True, help_text='The groups this user belongs to. A user will get all permissions granted to each of their groups.', related_name='user_set', related_query_name='user', to='auth.Group', verbose_name='groups')),  # noqa: E501
+                ('user_permissions', models.ManyToManyField(blank=True, help_text='Specific permissions for this user.', related_name='user_set', related_query_name='user', to='auth.Permission', verbose_name='user permissions')),  # noqa: E501
             ],
             options={
                 'abstract': False,
